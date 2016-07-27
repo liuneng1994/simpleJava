@@ -10,6 +10,6 @@
   	<result column="salary" property="salary"/>
   </resultMap>
   <select id="get" resultMap="employee">
-    select employee_id, first_name, last_name, salary from employees;
+    select employee_id, first_name, last_name, salary from employees
   </select>
 </mapper>
