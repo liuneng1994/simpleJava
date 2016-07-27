@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hand.ln.mybatis.dao.EmployeeDao">
+  <resultMap type="com.hand.ln.mybatis.model.Employee" id="employee">
+  	<id column="employee_id" property="employeeId"/>
+  	<result column="first_name" property="firstName"/>
+  	<result column="last_name" property="lastName"/>
+  	<result column="salary" property="salary"/>
+  </resultMap>
+  <select id="get" resultMap="employee">
+    select employee_id, first_name, last_name, salary from employees;
+  </select>
+</mapper>
